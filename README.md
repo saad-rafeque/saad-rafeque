@@ -11,4 +11,4 @@ the search budgets. AlphaZero won 200–0. Both agents beat the benchmark bot ar
 time, which is the point: the benchmark couldn't tell them apart and the head-to-head could.
 Currently interested in model-based versus model-free trade-offs, sample efficiency, and the gap
 between simulation and hardware.
-Engineering · Islamabad, Pakistan · saadrafiique@gmail.com
+Engineering
