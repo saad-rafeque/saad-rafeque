@@ -1,5 +1,4 @@
-Saad Rafique
-Reinforcement learning engineer. I work on control and decision-making for autonomous systems —
+I am a Reinforcement Learning (RL) Engineer. I work on control and decision-making for autonomous systems —
 Python for research and prototyping, MATLAB/Simulink on the deployment side.
 I like problems where you can check whether the thing actually works. A lot of RL results are
 reported against benchmarks that saturate, and the number stops meaning anything long before the
