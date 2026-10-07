@@ -6,14 +6,15 @@ I build decision-making and control software for autonomous drones: multi-vehicl
 
 ### Featured projects
 
-**[drone-swarm-failover](https://github.com/saad-rafeque/drone-swarm-failover)** · PX4, ROS 2 Jazzy, MAVROS, PPO
+**[drone-swarm-failover](https://github.com/saad-rafeque/drone-swarm-failover)** · PX4, ROS 2 Jazzy, MAVROS, PPO, C++17
 
 A 10-drone swarm that finishes its mission when the leader fails. Decentralized leader election, V-formation flight and obstacle avoidance, with no central controller.
 
 - New leader agreed 1.4–1.7 s after the leader is killed or loses its radio; goal reached in 55 of 55 PX4 fault trials
 - Exactly one leader after convergence in 1,000 of 1,000 randomized runs with crashes, delays and network splits
 - Learned avoidance policy completes 71 of 90 unseen obstacle courses, against 25 of 90 for a tuned potential-field controller
-- Election logic scales from 2 to 100 drones with the same takeover time
+- Election logic scales to 100 drones: a new leader in 1.60–1.75 s (median) at every size from 2 to 100
+- C++17 inference for the avoidance policy, checked against the Python code; tests run on every push
 - Simulation only (PX4 SIH); flight test plan for Pixhawk 6C hardware included
 
 **[dots-and-boxes-rl](https://github.com/saad-rafeque/dots-and-boxes-rl)** · PyTorch, Numba, MCTS
