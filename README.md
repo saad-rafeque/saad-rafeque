@@ -1,54 +1,39 @@
 # Saad Rafique
 
-**Reinforcement learning engineer** · Islamabad, Pakistan
+**UAV autonomy and reinforcement learning engineer** · Islamabad, Pakistan · open to relocation (UAE, Saudi Arabia)
 
-I build learning-based control and decision-making systems, and I care most about the part
-people usually skip: proving the thing actually works. Python for research and prototyping,
-MATLAB and Simulink on the deployment side.
+I build decision-making and control software for autonomous drones: multi-vehicle coordination, fault tolerance and learned obstacle avoidance on PX4 and ROS 2. Every result I report comes from logged runs measured against a stated pass limit.
 
-A lot of RL results get reported against benchmarks that saturate, where the number stops
-meaning anything long before the agent stops improving. Building a test that can still separate
-two good agents is usually harder than building the agents — most of my effort goes there.
+### Featured projects
 
-### Selected work
+**[drone-swarm-failover](https://github.com/saad-rafeque/drone-swarm-failover)** · PX4, ROS 2 Jazzy, MAVROS, PPO
 
-**[dots-and-boxes-rl](https://github.com/saad-rafeque/dots-and-boxes-rl)** — AlphaZero and a
-Dueling Double DQN, both written from scratch with no RL library, trained on the same game with
-the same input features, then played against each other with tree search disabled on both sides
-so the comparison is between the learned networks rather than the search budgets. AlphaZero won
-200–0. Both agents scored around 97% against the benchmark bot, which is the interesting part:
-the benchmark couldn't separate them and the head-to-head could.
+A 10-drone swarm that finishes its mission when the leader fails. Decentralized leader election, V-formation flight and obstacle avoidance, with no central controller.
 
-**IoT-based heart monitoring** — first-author paper on a low-power continuous cardiac monitoring
-system.
+- New leader agreed 1.4–1.7 s after the leader is killed or loses its radio; goal reached in 55 of 55 PX4 fault trials
+- Exactly one leader after convergence in 1,000 of 1,000 randomized runs with crashes, delays and network splits
+- Learned avoidance policy completes 71 of 90 unseen obstacle courses, against 25 of 90 for a tuned potential-field controller
+- Election logic scales from 2 to 100 drones with the same takeover time
+- Simulation only (PX4 SIH); flight test plan for Pixhawk 6C hardware included
 
-**Sight Switch** — smart home control driven by eye movement, built as a final year project.
-Computer vision for gaze tracking wired to real hardware control.
+**[dots-and-boxes-rl](https://github.com/saad-rafeque/dots-and-boxes-rl)** · PyTorch, Numba, MCTS
 
-### What I work with
+AlphaZero and a Dueling Double DQN written from scratch, with no RL library, and compared on the same board with the same input features. With tree search disabled on both sides the AlphaZero network won 200–0, while a standard benchmark bot scored the two agents within 3 points of each other. The repository documents why the benchmark failed and how the head-to-head test was built.
 
-Python, PyTorch, NumPy, Numba · MATLAB and Simulink · reinforcement learning, computer vision,
-embedded systems
+**[eye-gesture-control](https://github.com/saad-rafeque/eye-gesture-control)** · OpenCV, MediaPipe
 
-### Currently interested in
+Real-time gaze and blink input for hands-free cursor control. The vision front end of Sight Switch, my final-year project: smart-home control by eye movement for users with limited mobility (Raspberry Pi, MQTT, ESP32).
 
-Model-based versus model-free trade-offs and when each is the right tool, sample efficiency, and
-the gap between what works in simulation and what survives contact with hardware.
+### Stack
 
----
+| Area | Tools |
+| --- | --- |
+| UAV autonomy | PX4, ArduPilot, ROS 2, MAVROS, MAVLink, QGroundControl, Mission Planner, SITL |
+| Learning | PyTorch, Stable-Baselines3, Gymnasium; PPO, DQN, AlphaZero / MCTS |
+| Vision and embedded | OpenCV, MediaPipe, Raspberry Pi, ESP32, MQTT |
+| Languages | Python, MATLAB / Simulink |
+| Building next | C++ ROS 2 nodes, on-device inference on Jetson (ONNX, TensorRT) |
 
-📫 saadrafiique@gmail.com
-I am a Reinforcement Learning (RL) Engineer. I work on control and decision-making for autonomous systems —
-Python for research and prototyping, MATLAB/Simulink on the deployment side.
-I like problems where you can check whether the thing actually works. A lot of RL results are
-reported against benchmarks that saturate, and the number stops meaning anything long before the
-agent stops improving. Building a test that can still tell two good agents apart is usually
-harder than building the agents.
-dots-and-boxes-rl — AlphaZero and a
-Dueling Double DQN built from scratch for the same game, then played against each other with
-tree search disabled on both sides so the comparison is between the learned networks rather than
-the search budgets. AlphaZero won 200–0. Both agents beat the benchmark bot around 97% of the
-time, which is the point: the benchmark couldn't tell them apart and the head-to-head could.
-Currently interested in model-based versus model-free trade-offs, sample efficiency, and the gap
-between simulation and hardware.
-Engineering
+### Contact
+
+saadrafiique@gmail.com · [LinkedIn](https://www.linkedin.com/in/rafeque)
