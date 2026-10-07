@@ -32,7 +32,7 @@ Real-time gaze and blink input for hands-free cursor control. The vision front e
 | UAV autonomy | PX4, ArduPilot, ROS 2, MAVROS, MAVLink, QGroundControl, Mission Planner, SITL |
 | Learning | PyTorch, Stable-Baselines3, Gymnasium; PPO, DQN, AlphaZero / MCTS |
 | Vision and embedded | OpenCV, MediaPipe, Raspberry Pi, ESP32, MQTT |
-| Languages | Python, MATLAB / Simulink |
+| Languages | Python, C++17, MATLAB / Simulink |
 | Building next | C++ ROS 2 nodes, on-device inference on Jetson (ONNX, TensorRT) |
 
 ### Contact
